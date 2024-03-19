@@ -1,0 +1,36 @@
+[
+  {
+    "roomNumber": "307",
+    "name": "Networking Lab",
+    "status": "Occupied",
+    "class": "D12A",
+    "batch": "Batch B",
+    "subject": "MC",
+    "time": "8:30 AM - 10:30 AM",
+    "computers": 25,
+    "printers": 1,
+    "printerStatus": "Working",
+    "specifications": {
+      "ram": "8GB",
+      "storage": "512GB SSD",
+      "os": ["Microsoft", "Linux"]
+    }
+  },
+  {
+    "roomNumber": "308",
+    "name": "Programming Lab",
+    "status": "Vacant",
+    "class": "D12B",
+    "batch": "Batch A",
+    "subject": "Python",
+    "time": "11:00 AM - 1:00 PM",
+    "computers": 30,
+    "printers": 2,
+    "printerStatus": "Not Working",
+    "specifications": {
+      "ram": "16GB",
+      "storage": "1TB HDD",
+      "os": ["Windows", "Ubuntu"]
+    }
+  }
+]

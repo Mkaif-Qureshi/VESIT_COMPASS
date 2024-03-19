@@ -30,7 +30,7 @@ class _TimeCardState extends State<TimeCard> {
   void updateTime() {
     setState(() {
       formattedDateTime =
-          DateFormat(" dd-MM-yyyy  |  hh:mm:ss ").format(DateTime.now());
+          DateFormat(" dd-MM-yyyy  |  hh:mm a ").format(DateTime.now());
     });
   }
 

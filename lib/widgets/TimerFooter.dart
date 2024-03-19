@@ -29,7 +29,7 @@ class _TimerFooterState extends State<TimerFooter> {
   void _updateTime() {
     setState(() {
       _formattedDateTime =
-          DateFormat("dd-MM-yyyy | hh:mm:ss").format(DateTime.now());
+          DateFormat("dd-MM-yyyy | hh:mm a").format(DateTime.now());
     });
   }
 
