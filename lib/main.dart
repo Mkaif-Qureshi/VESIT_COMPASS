@@ -1,10 +1,18 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:vesit_compass/constants.dart';
 import 'package:vesit_compass/screens/HomePage.dart';
-import 'package:vesit_compass/screens/MyAppBar.dart';
+import 'package:vesit_compass/screens/LoginPage.dart';
+import 'package:vesit_compass/widgets/MyAppBar.dart';
 
-void main() {
+import 'firebase_options.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(MyApp());
 }
 
@@ -12,8 +20,17 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: SplashScreen(),
-    );
+
+        // home: SplashScreen(),
+        // Define initial route
+        initialRoute: '/',
+        // Define routes
+        routes: {
+          '/': (context) => SplashScreen(),
+          // SplashScreen will be the initial route
+          '/login': (context) => LoginPage(),
+          '/home': (context) => HomePage(),
+        });
   }
 }
 
@@ -27,10 +44,11 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     // Wait for 3 seconds and then navigate to the next page
-    Future.delayed(Duration(seconds: 3), () {
+    Future.delayed(Duration(seconds: 0), () {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (context) => HomePage()),
+        // MaterialPageRoute(builder: (context) => LoginPage()),
       );
     });
   }
@@ -64,7 +82,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 child:
                     AnimatedTextKit(isRepeatingAnimation: true, animatedTexts: [
                   TyperAnimatedText('VESIT COMPASS',
-                      speed: Duration(milliseconds: 100)),
+                      speed: Duration(milliseconds: 150)),
                 ]),
               ),
             ),

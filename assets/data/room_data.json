@@ -1,8 +1,109 @@
-[
-  {
-    "roomNumber": "307",
+{
+  "304": {
+    "name": "HOD Room | CMPN",
+    "status": "Not Vacant",
+    "incharge": ["Dr.Nupur Giri", "Dr.Gresha Bhatia", "Dr.Sharmila Sengupta", "Dr.Prashant Kanade", "Dr. Sujata Khedkar", "Dr. Rohini Temkar"],
+    "batch": "-",
+    "subject": "-",
+    "time": "08:30 AM - 3:30 PM",
+    "computers": 0,
+    "printers": 0,
+    "printerStatus": "-",
+    "specifications": {
+      "ram": "-",
+      "storage": "-",
+      "os": ["-"]
+    }
+  },
+  "301": {
+    "name": "Lab A",
+    "status": "Vacant",
+    "incharge": ["Mr. John Doe", "Ms. Jane Smith"],
+    "class": "D10A",
+    "batch": "Batch C",
+    "subject": "Java",
+    "time": "10:00 AM - 12:00 PM",
+    "computers": 20,
+    "printers": 1,
+    "printerStatus": "Working",
+    "specifications": {
+      "ram": "8GB",
+      "storage": "256GB SSD",
+      "os": ["Windows", "Linux"]
+    }
+  },
+  "302": {
+    "name": "Lab B",
+    "status": "Not Vacant",
+    "incharge": ["Mr. Michael Brown", "Ms. Emily Johnson"],
+    "class": "D10B",
+    "batch": "Batch D",
+    "subject": "C++",
+    "time": "9:30 AM - 11:30 AM",
+    "computers": 15,
+    "printers": 0,
+    "printerStatus": "-",
+    "specifications": {
+      "ram": "-",
+      "storage": "-",
+      "os": ["-"]
+    }
+  },
+  "303": {
+    "name": "Lab C",
+    "status": "Vacant",
+    "incharge": ["Mr. David Wilson", "Ms. Sarah Martinez"],
+    "class": "D11A",
+    "batch": "Batch E",
+    "subject": "HTML/CSS",
+    "time": "1:30 PM - 3:30 PM",
+    "computers": 25,
+    "printers": 2,
+    "printerStatus": "Working",
+    "specifications": {
+      "ram": "16GB",
+      "storage": "512GB SSD",
+      "os": ["Windows", "Ubuntu"]
+    }
+  },
+  "305": {
+    "name": "Lab D",
+    "status": "Occupied",
+    "incharge": ["Mr. Christopher Davis", "Ms. Amanda Miller"],
+    "class": "D11B",
+    "batch": "Batch F",
+    "subject": "JavaScript",
+    "time": "2:00 PM - 4:00 PM",
+    "computers": 20,
+    "printers": 1,
+    "printerStatus": "Working",
+    "specifications": {
+      "ram": "8GB",
+      "storage": "256GB SSD",
+      "os": ["Windows", "Linux"]
+    }
+  },
+  "306": {
+    "name": "Lab E",
+    "status": "Vacant",
+    "incharge": ["Mr. Robert Wilson", "Ms. Jessica Taylor"],
+    "class": "D12C",
+    "batch": "Batch G",
+    "subject": "SQL",
+    "time": "10:30 AM - 12:30 PM",
+    "computers": 30,
+    "printers": 1,
+    "printerStatus": "Not Working",
+    "specifications": {
+      "ram": "16GB",
+      "storage": "1TB HDD",
+      "os": ["Windows", "Ubuntu"]
+    }
+  },
+  "307": {
     "name": "Networking Lab",
     "status": "Occupied",
+    "incharge": ["Mrs. Yugchhaya Dhote", "Mrs. Rupali Soni", ""],
     "class": "D12A",
     "batch": "Batch B",
     "subject": "MC",
@@ -16,10 +117,10 @@
       "os": ["Microsoft", "Linux"]
     }
   },
-  {
-    "roomNumber": "308",
+  "308": {
     "name": "Programming Lab",
     "status": "Vacant",
+    "incharge": ["", ""],
     "class": "D12B",
     "batch": "Batch A",
     "subject": "Python",
@@ -32,5 +133,159 @@
       "storage": "1TB HDD",
       "os": ["Windows", "Ubuntu"]
     }
+  },
+  "309A": {
+    "name": "Lab F",
+    "status": "Vacant",
+    "incharge": ["Mr. William Anderson", "Ms. Jennifer Brown"],
+    "class": "D13A",
+    "batch": "Batch H",
+    "subject": "Ruby",
+    "time": "9:00 AM - 11:00 AM",
+    "computers": 25,
+    "printers": 1,
+    "printerStatus": "Working",
+    "specifications": {
+      "ram": "8GB",
+      "storage": "256GB SSD",
+      "os": ["Windows", "Linux"]
+    }
+  },
+  "309B": {
+    "name": "Lab G",
+    "status": "Not Vacant",
+    "incharge": ["Mr. Daniel White", "Ms. Amanda Green"],
+    "class": "D13B",
+    "batch": "Batch I",
+    "subject": "PHP",
+    "time": "10:30 AM - 12:30 PM",
+    "computers": 20,
+    "printers": 0,
+    "printerStatus": "-",
+    "specifications": {
+      "ram": "-",
+      "storage": "-",
+      "os": ["-"]
+    }
+  },
+  "310A": {
+    "name": "Lab H",
+    "status": "Occupied",
+    "incharge": ["Mr. Richard Harris", "Ms. Samantha Lee"],
+    "class": "D14A",
+    "batch": "Batch J",
+    "subject": "React",
+    "time": "1:00 PM - 3:00 PM",
+    "computers": 30,
+    "printers": 2,
+    "printerStatus": "Working",
+    "specifications": {
+      "ram": "16GB",
+      "storage": "512GB SSD",
+      "os": ["Windows", "Ubuntu"]
+    }
+  },
+  "310B": {
+    "name": "Lab I",
+    "status": "Vacant",
+    "incharge": ["Mr. Thomas Clark", "Ms. Melissa Wright"],
+    "class": "D14B",
+    "batch": "Batch K",
+    "subject": "Angular",
+    "time": "3:30 PM - 5:30 PM",
+    "computers": 25,
+    "printers": 1,
+    "printerStatus": "Working",
+    "specifications": {
+      "ram": "8GB",
+      "storage": "256GB SSD",
+      "os": ["Windows", "Linux"]
+    }
+  },
+  "311": {
+    "name": "Workshop",
+    "status": "Vacant",
+    "incharge": ["Mr. Alex Thompson", "Ms. Laura Evans"],
+    "class": "D15",
+    "batch": "-",
+    "subject": "-",
+    "time": "-",
+    "computers": 0,
+    "printers": 0,
+    "printerStatus": "-",
+    "specifications": {
+      "ram": "-",
+      "storage": "-",
+      "os": ["-"]
+    }
+  },
+  "312": {
+    "name": "Classroom 1",
+    "status": "Occupied",
+    "incharge": ["Mr. Mark Wilson", "Ms. Emma Taylor"],
+    "class": "B31",
+    "batch": "Batch L",
+    "subject": "Maths",
+    "time": "9:00 AM - 11:00 AM",
+    "computers": 0,
+    "printers": 0,
+    "printerStatus": "-",
+    "specifications": {
+      "ram": "-",
+      "storage": "-",
+      "os": ["-"]
+    }
+  },
+  "313": {
+    "name": "Classroom 2",
+    "status": "Vacant",
+    "incharge": ["Mr. James Wilson", "Ms. Olivia Brown"],
+    "class": "B32",
+    "batch": "Batch M",
+    "subject": "Physics",
+    "time": "11:30 AM - 1:30 PM",
+    "computers": 0,
+    "printers": 0,
+    "printerStatus": "-",
+    "specifications": {
+      "ram": "-",
+      "storage": "-",
+      "os": ["-"]
+    }
+  },
+  "314": {
+    "name": "Classroom 3",
+    "status": "Occupied",
+    "incharge": ["Mr. William Jones", "Ms. Sophia Garcia"],
+    "class": "B33",
+    "batch": "Batch N",
+    "subject": "Chemistry",
+    "time": "2:00 PM - 4:00 PM",
+    "computers": 0,
+    "printers": 0,
+    "printerStatus": "-",
+    "specifications": {
+      "ram": "-",
+      "storage": "-",
+      "os": ["-"]
+    }
+  },
+  "315": {
+    "name": "Classroom 4",
+    "status": "Vacant",
+    "incharge": ["Mr. Benjamin Smith", "Ms. Isabella Johnson"],
+    "class": "B34",
+    "batch": "Batch O",
+    "subject": "Biology",
+    "time": "3:30 PM - 5:30 PM",
+    "computers": 0,
+    "printers": 0,
+    "printerStatus": "-",
+    "specifications": {
+      "ram": "-",
+      "storage": "-",
+      "os": ["-"]
+    }
   }
-]
+
+}

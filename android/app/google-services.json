@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "950254460681",
+    "project_id": "vesitcompass",
+    "storage_bucket": "vesitcompass.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:950254460681:android:adae8c1f937213c7043dd8",
+        "android_client_info": {
+          "package_name": "com.mkaifqureshi.vesit_compass"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfZRCCz9NpUa_lGfnMbawvwVQL8t0nXeo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

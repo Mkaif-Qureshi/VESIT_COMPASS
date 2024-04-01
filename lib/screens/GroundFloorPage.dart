@@ -11,14 +11,14 @@ import 'package:vesit_compass/widgets/VerticalText.dart';
 import '../constants.dart';
 import 'RoomPage.dart';
 
-class FourthFloorPage extends StatefulWidget {
-  const FourthFloorPage({Key? key}) : super(key: key);
+class GroundFloorPage extends StatefulWidget {
+  const GroundFloorPage({Key? key}) : super(key: key);
 
   @override
-  _FourthFloorPageState createState() => _FourthFloorPageState();
+  _GroundFloorPageState createState() => _GroundFloorPageState();
 }
 
-class _FourthFloorPageState extends State<FourthFloorPage> {
+class _GroundFloorPageState extends State<GroundFloorPage> {
   Map<String, dynamic>? timetable;
 
   @override
@@ -97,9 +97,9 @@ class _FourthFloorPageState extends State<FourthFloorPage> {
 
     return Scaffold(
       appBar: MyAppBar(
-        title1: '4th Floor ',
+        title1: 'Ground Floor ',
         text1Size: 16,
-        title2: "EXTC",
+        title2: "Welcome To Vesit 🙏",
         logoPath: 'assets/images/vesit.png',
       ),
       body: SingleChildScrollView(
@@ -111,145 +111,73 @@ class _FourthFloorPageState extends State<FourthFloorPage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     RoomButton(
-                      roomNumber: '401',
-                      isOccupied: isRoomOccupied('401'),
+                      roomNumber: 'G01',
+                      isOccupied: isRoomOccupied('G01'),
                       onTap: () {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => RoomPage(roomNumber: '401'),
+                            builder: (context) => RoomPage(roomNumber: 'G01'),
                           ),
                         );
                       },
                     ),
                     RoomButton(
-                      roomNumber: '402',
-                      isOccupied: isRoomOccupied('402'),
+                      roomNumber: 'G02',
+                      isOccupied: isRoomOccupied('G02'),
                       onTap: () {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => RoomPage(roomNumber: '402'),
+                            builder: (context) => RoomPage(roomNumber: 'G02'),
                           ),
                         );
                       },
                     ),
                     RoomButton(
-                      roomNumber: '403',
-                      isOccupied: isRoomOccupied('403'),
+                      roomNumber: 'G03',
+                      isOccupied: isRoomOccupied('G03'),
                       onTap: () {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => RoomPage(roomNumber: '403'),
+                            builder: (context) => RoomPage(roomNumber: 'G03'),
                           ),
                         );
                       },
                     ),
                     RoomButton(
-                      roomNumber: '404',
-                      isOccupied: isRoomOccupied('404'),
+                      roomNumber: 'G04',
+                      isOccupied: isRoomOccupied('G04'),
                       onTap: () {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => RoomPage(roomNumber: '404'),
+                            builder: (context) => RoomPage(roomNumber: 'G04'),
                           ),
                         );
                       },
                     ),
                     RoomButton(
-                      roomNumber: '405',
-                      isOccupied: isRoomOccupied('405'),
+                      roomNumber: 'G05',
+                      isOccupied: isRoomOccupied('G05'),
                       onTap: () {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => RoomPage(roomNumber: '405'),
+                            builder: (context) => RoomPage(roomNumber: 'G05'),
                           ),
                         );
                       },
                     ),
                     RoomButton(
-                      roomNumber: '406',
-                      isOccupied: isRoomOccupied('406'),
+                      roomNumber: 'G06',
+                      isOccupied: isRoomOccupied('G06'),
                       onTap: () {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => RoomPage(roomNumber: '406'),
-                          ),
-                        );
-                      },
-                    ),
-                    RoomButton(
-                      roomNumber: '407',
-                      isOccupied: isRoomOccupied('407'),
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => RoomPage(roomNumber: '407'),
-                          ),
-                        );
-                      },
-                    ),
-                    RoomButton(
-                      roomNumber: '408',
-                      isOccupied: isRoomOccupied('408'),
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => RoomPage(roomNumber: '408'),
-                          ),
-                        );
-                      },
-                    ),
-                    RoomButton(
-                      roomNumber: '409',
-                      isOccupied: isRoomOccupied('409'),
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => RoomPage(roomNumber: '409'),
-                          ),
-                        );
-                      },
-                    ),
-                    RoomButton(
-                      roomNumber: '410',
-                      isOccupied: isRoomOccupied('410'),
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => RoomPage(roomNumber: '410'),
-                          ),
-                        );
-                      },
-                    ),
-                    RoomButton(
-                      roomNumber: '411',
-                      isOccupied: isRoomOccupied('411'),
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => RoomPage(roomNumber: '411'),
-                          ),
-                        );
-                      },
-                    ),
-                    RoomButton(
-                      roomNumber: '412',
-                      isOccupied: isRoomOccupied('412'),
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => RoomPage(roomNumber: '412'),
+                            builder: (context) => RoomPage(roomNumber: 'G06'),
                           ),
                         );
                       },
@@ -269,98 +197,98 @@ class _FourthFloorPageState extends State<FourthFloorPage> {
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
                       RoomButton(
-                        roomNumber: '413',
-                        isOccupied: isRoomOccupied('413'),
+                        roomNumber: 'G07',
+                        isOccupied: isRoomOccupied('G07'),
                         onTap: () {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => RoomPage(roomNumber: '413'),
+                              builder: (context) => RoomPage(roomNumber: 'G07'),
                             ),
                           );
                         },
                       ),
                       RoomButton(
-                        roomNumber: '414',
-                        isOccupied: isRoomOccupied('414'),
+                        roomNumber: 'G08',
+                        isOccupied: isRoomOccupied('G08'),
                         onTap: () {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => RoomPage(roomNumber: '414'),
+                              builder: (context) => RoomPage(roomNumber: 'G08'),
                             ),
                           );
                         },
                       ),
                       VerticalExitButton(),
                       RoomButton(
-                        roomNumber: '415',
-                        isOccupied: isRoomOccupied('415'),
+                        roomNumber: 'G09',
+                        isOccupied: isRoomOccupied('G09'),
                         onTap: () {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => RoomPage(roomNumber: '415'),
+                              builder: (context) => RoomPage(roomNumber: 'G09'),
                             ),
                           );
                         },
                       ),
                       RoomButton(
-                        roomNumber: '416',
-                        isOccupied: isRoomOccupied('416'),
+                        roomNumber: 'G10',
+                        isOccupied: isRoomOccupied('G10'),
                         onTap: () {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => RoomPage(roomNumber: '416'),
+                              builder: (context) => RoomPage(roomNumber: 'G10'),
                             ),
                           );
                         },
                       ),
                       RoomButton(
-                        roomNumber: '417',
-                        isOccupied: isRoomOccupied('417'),
+                        roomNumber: 'G11',
+                        isOccupied: isRoomOccupied('G11'),
                         onTap: () {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => RoomPage(roomNumber: '417'),
+                              builder: (context) => RoomPage(roomNumber: 'G11'),
                             ),
                           );
                         },
                       ),
                       RoomButton(
-                        roomNumber: '418',
-                        isOccupied: isRoomOccupied('418'),
+                        roomNumber: 'G12',
+                        isOccupied: isRoomOccupied('G12'),
                         onTap: () {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => RoomPage(roomNumber: '418'),
+                              builder: (context) => RoomPage(roomNumber: 'G12'),
                             ),
                           );
                         },
                       ),
                       RoomButton(
-                        roomNumber: '419',
-                        isOccupied: isRoomOccupied('419'),
+                        roomNumber: 'G13',
+                        isOccupied: isRoomOccupied('G13'),
                         onTap: () {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => RoomPage(roomNumber: '419'),
+                              builder: (context) => RoomPage(roomNumber: 'G13'),
                             ),
                           );
                         },
                       ),
                       RoomButton(
-                        roomNumber: '420',
-                        isOccupied: isRoomOccupied('420'),
+                        roomNumber: 'G14',
+                        isOccupied: isRoomOccupied('G14'),
                         onTap: () {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => RoomPage(roomNumber: '420'),
+                              builder: (context) => RoomPage(roomNumber: 'G14'),
                             ),
                           );
                         },

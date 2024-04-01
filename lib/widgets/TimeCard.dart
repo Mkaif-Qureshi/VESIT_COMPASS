@@ -15,6 +15,7 @@ class TimeCard extends StatefulWidget {
 
 class _TimeCardState extends State<TimeCard> {
   late String formattedDateTime;
+  late Timer _timer;
 
   @override
   void initState() {
@@ -22,7 +23,7 @@ class _TimeCardState extends State<TimeCard> {
     // Initialize the time when the widget is created
     updateTime();
     // Schedule periodic timer to update the time every second
-    Timer.periodic(Duration(seconds: 1), (timer) {
+    _timer = Timer.periodic(Duration(seconds: 1), (timer) {
       updateTime();
     });
   }
@@ -32,6 +33,13 @@ class _TimeCardState extends State<TimeCard> {
       formattedDateTime =
           DateFormat(" dd-MM-yyyy  |  hh:mm a ").format(DateTime.now());
     });
+  }
+
+  @override
+  void dispose() {
+    // Cancel the timer when the widget is disposed
+    _timer.cancel();
+    super.dispose();
   }
 
   @override

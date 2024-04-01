@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:vesit_compass/constants.dart';
+import 'package:vesit_compass/screens/FifthFloorPage.dart';
+import 'package:vesit_compass/screens/SixthFloorPage.dart';
 
 import '../screens/FirstFloorPage.dart';
+import '../screens/FourthFloorPage.dart';
+import '../screens/GroundFloorPage.dart';
 import '../screens/SecondFloorPage.dart';
 import '../screens/ThirdFloorPage.dart';
 
@@ -15,6 +19,8 @@ class FloorCard extends StatelessWidget {
       return "th";
     }
     switch (number % 10) {
+      case 0:
+        return "";
       case 1:
         return "st";
       case 2:
@@ -23,6 +29,14 @@ class FloorCard extends StatelessWidget {
         return "rd";
       default:
         return "th";
+    }
+  }
+
+  String getFloorText(int number) {
+    if (number == 0) {
+      return "Ground floor";
+    } else {
+      return "Floor $number${getSuffix(number)}";
     }
   }
 
@@ -35,9 +49,18 @@ class FloorCard extends StatelessWidget {
         color: Colors.blueGrey, // You can customize the color
         borderRadius: BorderRadius.circular(15.0),
         child: MaterialButton(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10.0),
+          ),
           onPressed: () {
             // Redirect to the floor page based on the floor number
             switch (floorNumber) {
+              case 0:
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => GroundFloorPage()),
+                );
+                break;
               case 1:
                 Navigator.push(
                   context,
@@ -56,6 +79,24 @@ class FloorCard extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => ThirdFloorPage()),
                 );
                 break;
+              case 4:
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => FourthFloorPage()),
+                );
+                break;
+              case 5:
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => FifthFloorPage()),
+                );
+                break;
+              case 6:
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => SixthFloorPage()),
+                );
+                break;
               // Add cases for other floors as needed
               // default:
               //   // If no specific page for the floor, you can show a generic page or handle it as needed
@@ -71,7 +112,7 @@ class FloorCard extends StatelessWidget {
           height: 50.0,
           color: kButtonColor,
           child: Text(
-            'Floor $floorNumber${getSuffix(floorNumber)}',
+            getFloorText(floorNumber),
             style: kMyTextStyle,
           ),
         ),

@@ -27,6 +27,10 @@ dependencies:
   cupertino_icons: ^1.0.2
   animated_text_kit: ^4.2.2
   intl: ^0.17.0 #for time and date
+  firebase_core: ^2.27.2
+  firebase_auth: ^4.18.0
+  cloud_firestore: ^4.15.10
+  google_fonts: ^6.2.1
 
 dev_dependencies:
   flutter_test:

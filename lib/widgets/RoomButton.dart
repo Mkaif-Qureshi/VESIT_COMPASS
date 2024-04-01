@@ -23,7 +23,7 @@ class RoomButton extends StatelessWidget {
         child: Material(
           elevation: 5.0,
           color: kButtonColor,
-          borderRadius: BorderRadius.circular(10.0),
+          borderRadius: BorderRadius.circular(20.0),
           child: InkWell(
             // Use InkWell for tap functionality
             onTap: onTap, // Call the onTap function when button is tapped
