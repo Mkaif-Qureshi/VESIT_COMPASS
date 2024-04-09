@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <title>Edit Event</title>
+</head>
+<body>
+    <h1>Edit Event</h1>
+    <form action="/update_event/{{ event.id }}" method="POST" enctype="multipart/form-data" id="eventform">
+        <div class="form-group">
+            <div class="column">
+                <label for="image">Event Image:</label>
+                <input type="file" id="image" name="image" accept="image/*">
+            </div>
+            <div class="column">
+                <label for="title">Event Title:</label>
+                <input type="text" id="title" name="title" value="{{ event.title }}" required>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="column">
+                <label for="society">Society Name:</label>
+                <input type="text" id="society" name="society" value="{{ event.society }}" required>
+            </div>
+            <div class="column">
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" value="{{ event.date }}" required>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="column">
+                <label for="time">Time:</label>
+                <input type="time" id="time" name="time" value="{{ event.time }}" required>
+            </div>
+            <div class="column">
+                <label for="venue">Venue:</label>
+                <input type="text" id="venue" name="venue" value="{{ event.venue }}" required>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <button type="submit">Update</button>
+        </div>
+    </form>
+</body>
+</html>

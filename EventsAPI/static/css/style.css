@@ -1,0 +1,113 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FCF6E6;
+    color: #052439;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    text-align: center;
+    margin-top: 30px;
+}
+
+form, table {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.column {
+    width: calc(50% - 10px);
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="time"],
+input[type="file"],
+textarea,
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin: 5px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input[type="file"] {
+    cursor: pointer;
+}
+
+button[type="submit"] {
+    background-color: #052439;
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100px;
+}
+
+button[type="submit"]:hover {
+    background-color: #041b29;
+}
+
+/* Style for Notification Popup */
+#notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    z-index: 1000;
+    transition: opacity 0.5s;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.btn{
+    margin: 2px;
+    padding: 5px 5px;
+    background-color: transparent;
+    box-shadow: none;
+}

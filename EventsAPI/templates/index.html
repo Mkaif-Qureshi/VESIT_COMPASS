@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <title>Event Form</title>
+</head>
+<body>
+    <h1>Add New Event</h1>
+    <form action="/submit_event" method="POST" enctype="multipart/form-data" id="eventform">
+        <div class="form-group">
+            <div class="column">
+                <label for="image">Event Image:</label>
+                <input type="file" id="image" name="image" accept="image/*">
+            </div>
+            <div class="column">
+                <label for="title">Event Title:</label>
+                <input type="text" id="title" name="title" required>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="column">
+                <label for="society">Society Name:</label>
+                <input type="text" id="society" name="society" required>
+            </div>
+            <div class="column">
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="column">
+                <label for="time">Time:</label>
+                <input type="time" id="time" name="time" required>
+            </div>
+            <div class="column">
+                <label for="venue">Venue:</label>
+                <input type="text" id="venue" name="venue" required>
+            </div>
+        </div>
+
+        <br class="form-group">
+            <label for="description">Description:</label></br>
+            <textarea id="description" name="description" rows="4" required></textarea>
+        </div>
+
+        <div class="form-group">
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+
+    <h2>All Events</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Society</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Venue</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for event in events %}
+            <tr>
+                <td>{{ event.title }}</td>
+                <td>{{ event.society }}</td>
+                <td>{{ event.date }}</td>
+                <td>{{ event.time }}</td>
+                <td>{{ event.venue }}</td>
+                <td>
+                    <form action="/edit_event/{{ event.id }}" method="GET" style="display: inline;" class="btn">
+                        <button type="submit">Edit</button>
+                    </form>
+                    
+                    <form action="/delete_event/{{ event.id }}" method="POST" style="display: inline;" class="btn">
+                        <button type="submit">Delete</button>
+                    </form>
+                    
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+</html>
