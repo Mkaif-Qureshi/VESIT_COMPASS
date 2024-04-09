@@ -40,14 +40,14 @@ class _SecondFloorPageState extends State<SecondFloorPage> {
         context: context,
         builder: (BuildContext context) {
           return AlertDialog(
-            title: Text("Error"),
-            content: Text("Failed to load timetable data."),
+            title: const Text("Error"),
+            content: const Text("Failed to load timetable data."),
             actions: [
               TextButton(
                 onPressed: () {
                   Navigator.of(context).pop();
                 },
-                child: Text("OK"),
+                child: const Text("OK"),
               ),
             ],
           );
@@ -87,16 +87,16 @@ class _SecondFloorPageState extends State<SecondFloorPage> {
     if (timetable == null) {
       return Scaffold(
         appBar: AppBar(
-          title: Text('Loading...'),
+          title: const Text('Loading...'),
         ),
-        body: Center(
+        body: const Center(
           child: CircularProgressIndicator(),
         ),
       );
     }
 
     return Scaffold(
-      appBar: MyAppBar(
+      appBar: const MyAppBar(
         title1: '2nd Floor ',
         text1Size: 16,
         title2: "AI&DS",
@@ -129,7 +129,7 @@ class _SecondFloorPageState extends State<SecondFloorPage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => RoomPage(roomNumber: '207'),
+                            builder: (context) => const RoomPage(roomNumber: '207'),
                           ),
                         );
                       },
@@ -146,7 +146,7 @@ class _SecondFloorPageState extends State<SecondFloorPage> {
                 ),
                 Center(
                   child: Container(
-                    child: Center(
+                    child: const Center(
                       child: VerticalText(
                         textList: ['C', 'O', 'R', 'R', 'I', 'D', 'O', 'R'],
                         textStyle: kCorridorTextStyle,
@@ -162,7 +162,7 @@ class _SecondFloorPageState extends State<SecondFloorPage> {
                           roomNumber: '212', isOccupied: isRoomOccupied('212')),
                       RoomButton(
                           roomNumber: '213', isOccupied: isRoomOccupied('213')),
-                      VerticalExitButton(),
+                      const VerticalExitButton(),
                       RoomButton(
                           roomNumber: '214', isOccupied: isRoomOccupied('214')),
                       RoomButton(
@@ -172,7 +172,7 @@ class _SecondFloorPageState extends State<SecondFloorPage> {
                 ),
               ],
             ),
-            TimerFooter(),
+            const TimerFooter(),
           ],
         ),
       ),

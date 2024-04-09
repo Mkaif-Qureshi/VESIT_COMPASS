@@ -6,11 +6,11 @@ class VerticalText extends StatelessWidget {
   final List<String> textList;
   final TextStyle textStyle;
 
-  VerticalText({required this.textList, required this.textStyle});
+  const VerticalText({super.key, required this.textList, required this.textStyle});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: 50,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,

@@ -5,7 +5,7 @@ const kTextColor = Color(0xFF052439);
 
 const kButtonColor = Color(0xFFF6EABE);
 const kProgressIndicator = Color(0xFFBE7066);
-final kShadowColor = Color(0xFFD3D3D3).withOpacity(.84);
+final kShadowColor = const Color(0xFFD3D3D3).withOpacity(.84);
 
 const TextStyle kMyTextStyle = TextStyle(
   color: kTextColor,

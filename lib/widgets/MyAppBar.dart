@@ -24,13 +24,13 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
             fit: BoxFit.fill,
             width: 50,
           ),
-          SizedBox(width: 8.0),
+          const SizedBox(width: 8.0),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
                 title1,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 16,
                   color: kTextColor,
                   fontWeight: FontWeight.bold,
@@ -39,7 +39,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
               if (title2 != null) // Conditionally render title2 if not null
                 Text(
                   title2!,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
                     color: kTextColor,
@@ -54,5 +54,5 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
   }
 
   @override
-  Size get preferredSize => Size.fromHeight(kToolbarHeight);
+  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 }

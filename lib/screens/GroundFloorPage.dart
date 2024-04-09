@@ -40,14 +40,14 @@ class _GroundFloorPageState extends State<GroundFloorPage> {
         context: context,
         builder: (BuildContext context) {
           return AlertDialog(
-            title: Text("Error"),
-            content: Text("Failed to load timetable data."),
+            title: const Text("Error"),
+            content: const Text("Failed to load timetable data."),
             actions: [
               TextButton(
                 onPressed: () {
                   Navigator.of(context).pop();
                 },
-                child: Text("OK"),
+                child: const Text("OK"),
               ),
             ],
           );
@@ -87,16 +87,16 @@ class _GroundFloorPageState extends State<GroundFloorPage> {
     if (timetable == null) {
       return Scaffold(
         appBar: AppBar(
-          title: Text('Loading...'),
+          title: const Text('Loading...'),
         ),
-        body: Center(
+        body: const Center(
           child: CircularProgressIndicator(),
         ),
       );
     }
 
     return Scaffold(
-      appBar: MyAppBar(
+      appBar: const MyAppBar(
         title1: 'Ground Floor ',
         text1Size: 16,
         title2: "Welcome To Vesit 🙏",
@@ -117,7 +117,7 @@ class _GroundFloorPageState extends State<GroundFloorPage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => RoomPage(roomNumber: 'G01'),
+                            builder: (context) => const RoomPage(roomNumber: 'G01'),
                           ),
                         );
                       },
@@ -129,7 +129,7 @@ class _GroundFloorPageState extends State<GroundFloorPage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => RoomPage(roomNumber: 'G02'),
+                            builder: (context) => const RoomPage(roomNumber: 'G02'),
                           ),
                         );
                       },
@@ -141,7 +141,7 @@ class _GroundFloorPageState extends State<GroundFloorPage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => RoomPage(roomNumber: 'G03'),
+                            builder: (context) => const RoomPage(roomNumber: 'G03'),
                           ),
                         );
                       },
@@ -153,7 +153,7 @@ class _GroundFloorPageState extends State<GroundFloorPage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => RoomPage(roomNumber: 'G04'),
+                            builder: (context) => const RoomPage(roomNumber: 'G04'),
                           ),
                         );
                       },
@@ -165,7 +165,7 @@ class _GroundFloorPageState extends State<GroundFloorPage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => RoomPage(roomNumber: 'G05'),
+                            builder: (context) => const RoomPage(roomNumber: 'G05'),
                           ),
                         );
                       },
@@ -177,7 +177,7 @@ class _GroundFloorPageState extends State<GroundFloorPage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => RoomPage(roomNumber: 'G06'),
+                            builder: (context) => const RoomPage(roomNumber: 'G06'),
                           ),
                         );
                       },
@@ -186,7 +186,7 @@ class _GroundFloorPageState extends State<GroundFloorPage> {
                 ),
                 Center(
                   child: Container(
-                    child: VerticalText(
+                    child: const VerticalText(
                       textList: ['C', 'O', 'R', 'R', 'I', 'D', 'O', 'R'],
                       textStyle: kCorridorTextStyle,
                     ),
@@ -203,7 +203,7 @@ class _GroundFloorPageState extends State<GroundFloorPage> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => RoomPage(roomNumber: 'G07'),
+                              builder: (context) => const RoomPage(roomNumber: 'G07'),
                             ),
                           );
                         },
@@ -215,12 +215,12 @@ class _GroundFloorPageState extends State<GroundFloorPage> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => RoomPage(roomNumber: 'G08'),
+                              builder: (context) => const RoomPage(roomNumber: 'G08'),
                             ),
                           );
                         },
                       ),
-                      VerticalExitButton(),
+                      const VerticalExitButton(),
                       RoomButton(
                         roomNumber: 'G09',
                         isOccupied: isRoomOccupied('G09'),
@@ -228,7 +228,7 @@ class _GroundFloorPageState extends State<GroundFloorPage> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => RoomPage(roomNumber: 'G09'),
+                              builder: (context) => const RoomPage(roomNumber: 'G09'),
                             ),
                           );
                         },
@@ -240,7 +240,7 @@ class _GroundFloorPageState extends State<GroundFloorPage> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => RoomPage(roomNumber: 'G10'),
+                              builder: (context) => const RoomPage(roomNumber: 'G10'),
                             ),
                           );
                         },
@@ -252,7 +252,7 @@ class _GroundFloorPageState extends State<GroundFloorPage> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => RoomPage(roomNumber: 'G11'),
+                              builder: (context) => const RoomPage(roomNumber: 'G11'),
                             ),
                           );
                         },
@@ -264,7 +264,7 @@ class _GroundFloorPageState extends State<GroundFloorPage> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => RoomPage(roomNumber: 'G12'),
+                              builder: (context) => const RoomPage(roomNumber: 'G12'),
                             ),
                           );
                         },
@@ -276,7 +276,7 @@ class _GroundFloorPageState extends State<GroundFloorPage> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => RoomPage(roomNumber: 'G13'),
+                              builder: (context) => const RoomPage(roomNumber: 'G13'),
                             ),
                           );
                         },
@@ -288,7 +288,7 @@ class _GroundFloorPageState extends State<GroundFloorPage> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => RoomPage(roomNumber: 'G14'),
+                              builder: (context) => const RoomPage(roomNumber: 'G14'),
                             ),
                           );
                         },
@@ -298,7 +298,7 @@ class _GroundFloorPageState extends State<GroundFloorPage> {
                 ),
               ],
             ),
-            TimerFooter(),
+            const TimerFooter(),
           ],
         ),
       ),

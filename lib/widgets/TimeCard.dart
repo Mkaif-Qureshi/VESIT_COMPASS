@@ -7,7 +7,7 @@ import 'package:vesit_compass/constants.dart';
 class TimeCard extends StatefulWidget {
   final Color color;
 
-  TimeCard({required this.color});
+  const TimeCard({super.key, required this.color});
 
   @override
   _TimeCardState createState() => _TimeCardState();
@@ -23,7 +23,7 @@ class _TimeCardState extends State<TimeCard> {
     // Initialize the time when the widget is created
     updateTime();
     // Schedule periodic timer to update the time every second
-    _timer = Timer.periodic(Duration(seconds: 1), (timer) {
+    _timer = Timer.periodic(const Duration(seconds: 1), (timer) {
       updateTime();
     });
   }
@@ -45,7 +45,7 @@ class _TimeCardState extends State<TimeCard> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(vertical: 15.0),
+      padding: const EdgeInsets.symmetric(vertical: 15.0),
       child: Material(
         elevation: 5.0,
         color: kButtonColor,

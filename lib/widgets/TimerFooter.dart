@@ -21,7 +21,7 @@ class _TimerFooterState extends State<TimerFooter> {
     // Initialize the time when the widget is created
     _updateTime();
     // Schedule periodic timer to update the time every second
-    _timer = Timer.periodic(Duration(seconds: 1), (timer) {
+    _timer = Timer.periodic(const Duration(seconds: 1), (timer) {
       _updateTime();
     });
   }
@@ -44,10 +44,10 @@ class _TimerFooterState extends State<TimerFooter> {
     return Container(
       color: kButtonColor, // Set your desired background color here
       width: double.infinity,
-      padding: EdgeInsets.all(8.0),
+      padding: const EdgeInsets.all(8.0),
       alignment: Alignment.center,
       child: Text(
-        '$_formattedDateTime',
+        _formattedDateTime,
         style: kMyTextStyle,
       ),
     );

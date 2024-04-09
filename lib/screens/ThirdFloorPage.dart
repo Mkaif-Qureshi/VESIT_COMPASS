@@ -40,14 +40,14 @@ class _ThirdFloorPageState extends State<ThirdFloorPage> {
         context: context,
         builder: (BuildContext context) {
           return AlertDialog(
-            title: Text("Error"),
-            content: Text("Failed to load timetable data."),
+            title: const Text("Error"),
+            content: const Text("Failed to load timetable data."),
             actions: [
               TextButton(
                 onPressed: () {
                   Navigator.of(context).pop();
                 },
-                child: Text("OK"),
+                child: const Text("OK"),
               ),
             ],
           );
@@ -87,16 +87,16 @@ class _ThirdFloorPageState extends State<ThirdFloorPage> {
     if (timetable == null) {
       return Scaffold(
         appBar: AppBar(
-          title: Text('Loading...'),
+          title: const Text('Loading...'),
         ),
-        body: Center(
+        body: const Center(
           child: CircularProgressIndicator(),
         ),
       );
     }
 
     return Scaffold(
-      appBar: MyAppBar(
+      appBar: const MyAppBar(
         title1: '3rd Floor ',
         text1Size: 16,
         title2: "Computer Department (CMPN)",
@@ -117,7 +117,7 @@ class _ThirdFloorPageState extends State<ThirdFloorPage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => RoomPage(roomNumber: '301'),
+                            builder: (context) => const RoomPage(roomNumber: '301'),
                           ),
                         );
                       },
@@ -129,7 +129,7 @@ class _ThirdFloorPageState extends State<ThirdFloorPage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => RoomPage(roomNumber: '302'),
+                            builder: (context) => const RoomPage(roomNumber: '302'),
                           ),
                         );
                       },
@@ -141,7 +141,7 @@ class _ThirdFloorPageState extends State<ThirdFloorPage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => RoomPage(roomNumber: '303'),
+                            builder: (context) => const RoomPage(roomNumber: '303'),
                           ),
                         );
                       },
@@ -153,7 +153,7 @@ class _ThirdFloorPageState extends State<ThirdFloorPage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => RoomPage(roomNumber: '304'),
+                            builder: (context) => const RoomPage(roomNumber: '304'),
                           ),
                         );
                       },
@@ -165,7 +165,7 @@ class _ThirdFloorPageState extends State<ThirdFloorPage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => RoomPage(roomNumber: '305A'),
+                            builder: (context) => const RoomPage(roomNumber: '305A'),
                           ),
                         );
                       },
@@ -177,7 +177,7 @@ class _ThirdFloorPageState extends State<ThirdFloorPage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => RoomPage(roomNumber: '306'),
+                            builder: (context) => const RoomPage(roomNumber: '306'),
                           ),
                         );
                       },
@@ -189,7 +189,7 @@ class _ThirdFloorPageState extends State<ThirdFloorPage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => RoomPage(roomNumber: '307'),
+                            builder: (context) => const RoomPage(roomNumber: '307'),
                           ),
                         );
                       },
@@ -201,7 +201,7 @@ class _ThirdFloorPageState extends State<ThirdFloorPage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => RoomPage(roomNumber: '308'),
+                            builder: (context) => const RoomPage(roomNumber: '308'),
                           ),
                         );
                       },
@@ -213,7 +213,7 @@ class _ThirdFloorPageState extends State<ThirdFloorPage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => RoomPage(roomNumber: '309A'),
+                            builder: (context) => const RoomPage(roomNumber: '309A'),
                           ),
                         );
                       },
@@ -225,7 +225,7 @@ class _ThirdFloorPageState extends State<ThirdFloorPage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => RoomPage(roomNumber: '310A'),
+                            builder: (context) => const RoomPage(roomNumber: '310A'),
                           ),
                         );
                       },
@@ -237,7 +237,7 @@ class _ThirdFloorPageState extends State<ThirdFloorPage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => RoomPage(roomNumber: '310B'),
+                            builder: (context) => const RoomPage(roomNumber: '310B'),
                           ),
                         );
                       },
@@ -249,7 +249,7 @@ class _ThirdFloorPageState extends State<ThirdFloorPage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => RoomPage(roomNumber: '311'),
+                            builder: (context) => const RoomPage(roomNumber: '311'),
                           ),
                         );
                       },
@@ -258,7 +258,7 @@ class _ThirdFloorPageState extends State<ThirdFloorPage> {
                 ),
                 Center(
                   child: Container(
-                    child: VerticalText(
+                    child: const VerticalText(
                       textList: ['C', 'O', 'R', 'R', 'I', 'D', 'O', 'R'],
                       textStyle: kCorridorTextStyle,
                     ),
@@ -275,7 +275,7 @@ class _ThirdFloorPageState extends State<ThirdFloorPage> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => RoomPage(roomNumber: '314'),
+                              builder: (context) => const RoomPage(roomNumber: '314'),
                             ),
                           );
                         },
@@ -287,12 +287,12 @@ class _ThirdFloorPageState extends State<ThirdFloorPage> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => RoomPage(roomNumber: '315'),
+                              builder: (context) => const RoomPage(roomNumber: '315'),
                             ),
                           );
                         },
                       ),
-                      VerticalExitButton(),
+                      const VerticalExitButton(),
                       RoomButton(
                         roomNumber: '312',
                         isOccupied: isRoomOccupied('312'),
@@ -300,7 +300,7 @@ class _ThirdFloorPageState extends State<ThirdFloorPage> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => RoomPage(roomNumber: '312'),
+                              builder: (context) => const RoomPage(roomNumber: '312'),
                             ),
                           );
                         },
@@ -312,7 +312,7 @@ class _ThirdFloorPageState extends State<ThirdFloorPage> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => RoomPage(roomNumber: '313'),
+                              builder: (context) => const RoomPage(roomNumber: '313'),
                             ),
                           );
                         },
@@ -324,7 +324,7 @@ class _ThirdFloorPageState extends State<ThirdFloorPage> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => RoomPage(roomNumber: 'B31'),
+                              builder: (context) => const RoomPage(roomNumber: 'B31'),
                             ),
                           );
                         },
@@ -336,7 +336,7 @@ class _ThirdFloorPageState extends State<ThirdFloorPage> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => RoomPage(roomNumber: 'B32'),
+                              builder: (context) => const RoomPage(roomNumber: 'B32'),
                             ),
                           );
                         },
@@ -348,7 +348,7 @@ class _ThirdFloorPageState extends State<ThirdFloorPage> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => RoomPage(roomNumber: 'B33'),
+                              builder: (context) => const RoomPage(roomNumber: 'B33'),
                             ),
                           );
                         },
@@ -358,7 +358,7 @@ class _ThirdFloorPageState extends State<ThirdFloorPage> {
                 ),
               ],
             ),
-            TimerFooter(),
+            const TimerFooter(),
           ],
         ),
       ),

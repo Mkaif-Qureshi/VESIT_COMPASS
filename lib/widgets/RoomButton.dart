@@ -17,9 +17,9 @@ class RoomButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: 100.0,
-      margin: EdgeInsets.symmetric(vertical: 5.0),
+      margin: const EdgeInsets.symmetric(vertical: 5.0),
       child: Padding(
-        padding: EdgeInsets.symmetric(vertical: 5.0, horizontal: 5.0),
+        padding: const EdgeInsets.symmetric(vertical: 5.0, horizontal: 5.0),
         child: Material(
           elevation: 5.0,
           color: kButtonColor,
@@ -36,7 +36,7 @@ class RoomButton extends StatelessWidget {
                     roomNumber,
                     style: kMyTextStyle,
                   ),
-                  SizedBox(width: 10.0),
+                  const SizedBox(width: 10.0),
                   Container(
                     width: 20.0,
                     height: 20.0,

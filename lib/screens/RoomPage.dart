@@ -9,7 +9,7 @@ import '../widgets/MyAppBar.dart';
 class RoomPage extends StatefulWidget {
   final String roomNumber;
 
-  RoomPage({required this.roomNumber});
+  const RoomPage({super.key, required this.roomNumber});
 
   @override
   _RoomPageState createState() => _RoomPageState();
@@ -42,7 +42,7 @@ class _RoomPageState extends State<RoomPage> {
           text1Size: 20.0,
           logoPath: 'assets/images/vesit.png',
         ),
-        body: Center(
+        body: const Center(
           child: CircularProgressIndicator(),
         ),
       );
@@ -56,7 +56,7 @@ class _RoomPageState extends State<RoomPage> {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(16.0),
+          padding: const EdgeInsets.all(16.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -72,13 +72,13 @@ class _RoomPageState extends State<RoomPage> {
                         style: kMyTextStyle.copyWith(
                             fontSize: 18.0, fontWeight: FontWeight.bold),
                       ),
-                      SizedBox(height: 8.0),
+                      const SizedBox(height: 8.0),
                       ListTile(
-                        title: Text('Status:'),
+                        title: const Text('Status:'),
                         subtitle: Text(roomData["status"], style: kMyTextStyle),
                       ),
                       ListTile(
-                        title: Text('Incharge:'),
+                        title: const Text('Incharge:'),
                         subtitle: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: (roomData["incharge"] as List)
@@ -88,30 +88,30 @@ class _RoomPageState extends State<RoomPage> {
                         ),
                       ),
                       ListTile(
-                        title: Text('Batch:'),
+                        title: const Text('Batch:'),
                         subtitle: Text(roomData["batch"], style: kMyTextStyle),
                       ),
                       ListTile(
-                        title: Text('Subject:'),
+                        title: const Text('Subject:'),
                         subtitle:
                             Text(roomData["subject"], style: kMyTextStyle),
                       ),
                       ListTile(
-                        title: Text('Time:'),
+                        title: const Text('Time:'),
                         subtitle: Text(roomData["time"], style: kMyTextStyle),
                       ),
                       ListTile(
-                        title: Text('Number of Computers:'),
+                        title: const Text('Number of Computers:'),
                         subtitle: Text(roomData["computers"].toString(),
                             style: kMyTextStyle),
                       ),
                       ListTile(
-                        title: Text('Number of Printers:'),
+                        title: const Text('Number of Printers:'),
                         subtitle: Text(roomData["printers"].toString(),
                             style: kMyTextStyle),
                       ),
                       ListTile(
-                        title: Text('Printer Status:'),
+                        title: const Text('Printer Status:'),
                         subtitle: Text(roomData["printerStatus"],
                             style: kMyTextStyle),
                       ),
@@ -119,7 +119,7 @@ class _RoomPageState extends State<RoomPage> {
                   ),
                 ),
               ),
-              SizedBox(height: 16.0),
+              const SizedBox(height: 16.0),
               Card(
                 elevation: 5,
                 child: Padding(
@@ -132,19 +132,19 @@ class _RoomPageState extends State<RoomPage> {
                         style: kMyTextStyle.copyWith(
                             fontSize: 18.0, fontWeight: FontWeight.bold),
                       ),
-                      SizedBox(height: 8.0),
+                      const SizedBox(height: 8.0),
                       ListTile(
-                        title: Text('RAM:'),
+                        title: const Text('RAM:'),
                         subtitle: Text(roomData["specifications"]["ram"],
                             style: kMyTextStyle),
                       ),
                       ListTile(
-                        title: Text('Storage:'),
+                        title: const Text('Storage:'),
                         subtitle: Text(roomData["specifications"]["storage"],
                             style: kMyTextStyle),
                       ),
                       ListTile(
-                        title: Text('Operating Systems:'),
+                        title: const Text('Operating Systems:'),
                         subtitle: Text(
                             roomData["specifications"]["os"].join(", "),
                             style: kMyTextStyle),
@@ -162,7 +162,7 @@ class _RoomPageState extends State<RoomPage> {
         onPressed: () {
           Navigator.pop(context); // Go back when button is pressed
         },
-        child: Icon(Icons.arrow_back),
+        child: const Icon(Icons.arrow_back),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
     );

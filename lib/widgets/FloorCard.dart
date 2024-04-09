@@ -12,7 +12,7 @@ import '../screens/ThirdFloorPage.dart';
 class FloorCard extends StatelessWidget {
   final int floorNumber;
 
-  FloorCard({required this.floorNumber});
+  const FloorCard({super.key, required this.floorNumber});
 
   String getSuffix(int number) {
     if (number % 100 >= 11 && number % 100 <= 13) {
@@ -43,7 +43,7 @@ class FloorCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(vertical: 15.0),
+      padding: const EdgeInsets.symmetric(vertical: 15.0),
       child: Material(
         elevation: 5.0,
         color: Colors.blueGrey, // You can customize the color
@@ -58,43 +58,43 @@ class FloorCard extends StatelessWidget {
               case 0:
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => GroundFloorPage()),
+                  MaterialPageRoute(builder: (context) => const GroundFloorPage()),
                 );
                 break;
               case 1:
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => FirstFloorPage()),
+                  MaterialPageRoute(builder: (context) => const FirstFloorPage()),
                 );
                 break;
               case 2:
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => SecondFloorPage()),
+                  MaterialPageRoute(builder: (context) => const SecondFloorPage()),
                 );
                 break;
               case 3:
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => ThirdFloorPage()),
+                  MaterialPageRoute(builder: (context) => const ThirdFloorPage()),
                 );
                 break;
               case 4:
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => FourthFloorPage()),
+                  MaterialPageRoute(builder: (context) => const FourthFloorPage()),
                 );
                 break;
               case 5:
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => FifthFloorPage()),
+                  MaterialPageRoute(builder: (context) => const FifthFloorPage()),
                 );
                 break;
               case 6:
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => SixthFloorPage()),
+                  MaterialPageRoute(builder: (context) => const SixthFloorPage()),
                 );
                 break;
               // Add cases for other floors as needed

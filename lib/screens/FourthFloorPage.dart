@@ -40,14 +40,14 @@ class _FourthFloorPageState extends State<FourthFloorPage> {
         context: context,
         builder: (BuildContext context) {
           return AlertDialog(
-            title: Text("Error"),
-            content: Text("Failed to load timetable data."),
+            title: const Text("Error"),
+            content: const Text("Failed to load timetable data."),
             actions: [
               TextButton(
                 onPressed: () {
                   Navigator.of(context).pop();
                 },
-                child: Text("OK"),
+                child: const Text("OK"),
               ),
             ],
           );
@@ -87,16 +87,16 @@ class _FourthFloorPageState extends State<FourthFloorPage> {
     if (timetable == null) {
       return Scaffold(
         appBar: AppBar(
-          title: Text('Loading...'),
+          title: const Text('Loading...'),
         ),
-        body: Center(
+        body: const Center(
           child: CircularProgressIndicator(),
         ),
       );
     }
 
     return Scaffold(
-      appBar: MyAppBar(
+      appBar: const MyAppBar(
         title1: '4th Floor ',
         text1Size: 16,
         title2: "EXTC",
@@ -117,7 +117,7 @@ class _FourthFloorPageState extends State<FourthFloorPage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => RoomPage(roomNumber: '401'),
+                            builder: (context) => const RoomPage(roomNumber: '401'),
                           ),
                         );
                       },
@@ -129,7 +129,7 @@ class _FourthFloorPageState extends State<FourthFloorPage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => RoomPage(roomNumber: '402'),
+                            builder: (context) => const RoomPage(roomNumber: '402'),
                           ),
                         );
                       },
@@ -141,7 +141,7 @@ class _FourthFloorPageState extends State<FourthFloorPage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => RoomPage(roomNumber: '403'),
+                            builder: (context) => const RoomPage(roomNumber: '403'),
                           ),
                         );
                       },
@@ -153,7 +153,7 @@ class _FourthFloorPageState extends State<FourthFloorPage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => RoomPage(roomNumber: '404'),
+                            builder: (context) => const RoomPage(roomNumber: '404'),
                           ),
                         );
                       },
@@ -165,7 +165,7 @@ class _FourthFloorPageState extends State<FourthFloorPage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => RoomPage(roomNumber: '405'),
+                            builder: (context) => const RoomPage(roomNumber: '405'),
                           ),
                         );
                       },
@@ -177,7 +177,7 @@ class _FourthFloorPageState extends State<FourthFloorPage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => RoomPage(roomNumber: '406'),
+                            builder: (context) => const RoomPage(roomNumber: '406'),
                           ),
                         );
                       },
@@ -189,7 +189,7 @@ class _FourthFloorPageState extends State<FourthFloorPage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => RoomPage(roomNumber: '407'),
+                            builder: (context) => const RoomPage(roomNumber: '407'),
                           ),
                         );
                       },
@@ -201,7 +201,7 @@ class _FourthFloorPageState extends State<FourthFloorPage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => RoomPage(roomNumber: '408'),
+                            builder: (context) => const RoomPage(roomNumber: '408'),
                           ),
                         );
                       },
@@ -213,7 +213,7 @@ class _FourthFloorPageState extends State<FourthFloorPage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => RoomPage(roomNumber: '409'),
+                            builder: (context) => const RoomPage(roomNumber: '409'),
                           ),
                         );
                       },
@@ -225,7 +225,7 @@ class _FourthFloorPageState extends State<FourthFloorPage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => RoomPage(roomNumber: '410'),
+                            builder: (context) => const RoomPage(roomNumber: '410'),
                           ),
                         );
                       },
@@ -237,7 +237,7 @@ class _FourthFloorPageState extends State<FourthFloorPage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => RoomPage(roomNumber: '411'),
+                            builder: (context) => const RoomPage(roomNumber: '411'),
                           ),
                         );
                       },
@@ -249,7 +249,7 @@ class _FourthFloorPageState extends State<FourthFloorPage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => RoomPage(roomNumber: '412'),
+                            builder: (context) => const RoomPage(roomNumber: '412'),
                           ),
                         );
                       },
@@ -258,7 +258,7 @@ class _FourthFloorPageState extends State<FourthFloorPage> {
                 ),
                 Center(
                   child: Container(
-                    child: VerticalText(
+                    child: const VerticalText(
                       textList: ['C', 'O', 'R', 'R', 'I', 'D', 'O', 'R'],
                       textStyle: kCorridorTextStyle,
                     ),
@@ -275,7 +275,7 @@ class _FourthFloorPageState extends State<FourthFloorPage> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => RoomPage(roomNumber: '413'),
+                              builder: (context) => const RoomPage(roomNumber: '413'),
                             ),
                           );
                         },
@@ -287,12 +287,12 @@ class _FourthFloorPageState extends State<FourthFloorPage> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => RoomPage(roomNumber: '414'),
+                              builder: (context) => const RoomPage(roomNumber: '414'),
                             ),
                           );
                         },
                       ),
-                      VerticalExitButton(),
+                      const VerticalExitButton(),
                       RoomButton(
                         roomNumber: '415',
                         isOccupied: isRoomOccupied('415'),
@@ -300,7 +300,7 @@ class _FourthFloorPageState extends State<FourthFloorPage> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => RoomPage(roomNumber: '415'),
+                              builder: (context) => const RoomPage(roomNumber: '415'),
                             ),
                           );
                         },
@@ -312,7 +312,7 @@ class _FourthFloorPageState extends State<FourthFloorPage> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => RoomPage(roomNumber: '416'),
+                              builder: (context) => const RoomPage(roomNumber: '416'),
                             ),
                           );
                         },
@@ -324,7 +324,7 @@ class _FourthFloorPageState extends State<FourthFloorPage> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => RoomPage(roomNumber: '417'),
+                              builder: (context) => const RoomPage(roomNumber: '417'),
                             ),
                           );
                         },
@@ -336,7 +336,7 @@ class _FourthFloorPageState extends State<FourthFloorPage> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => RoomPage(roomNumber: '418'),
+                              builder: (context) => const RoomPage(roomNumber: '418'),
                             ),
                           );
                         },
@@ -348,7 +348,7 @@ class _FourthFloorPageState extends State<FourthFloorPage> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => RoomPage(roomNumber: '419'),
+                              builder: (context) => const RoomPage(roomNumber: '419'),
                             ),
                           );
                         },
@@ -360,7 +360,7 @@ class _FourthFloorPageState extends State<FourthFloorPage> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => RoomPage(roomNumber: '420'),
+                              builder: (context) => const RoomPage(roomNumber: '420'),
                             ),
                           );
                         },
@@ -370,7 +370,7 @@ class _FourthFloorPageState extends State<FourthFloorPage> {
                 ),
               ],
             ),
-            TimerFooter(),
+            const TimerFooter(),
           ],
         ),
       ),

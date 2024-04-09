@@ -13,10 +13,12 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -26,15 +28,17 @@ class MyApp extends StatelessWidget {
         initialRoute: '/',
         // Define routes
         routes: {
-          '/': (context) => SplashScreen(),
+          '/': (context) => const SplashScreen(),
           // SplashScreen will be the initial route
           '/login': (context) => LoginPage(),
-          '/home': (context) => HomePage(),
+          '/home': (context) => const HomePage(),
         });
   }
 }
 
 class SplashScreen extends StatefulWidget {
+  const SplashScreen({super.key});
+
   @override
   _SplashScreenState createState() => _SplashScreenState();
 }
@@ -44,11 +48,11 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     // Wait for 3 seconds and then navigate to the next page
-    Future.delayed(Duration(seconds: 0), () {
+    Future.delayed(const Duration(seconds: 5), () {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => HomePage()),
-        // MaterialPageRoute(builder: (context) => LoginPage()),
+        // MaterialPageRoute(builder: (context) => const HomePage()),
+        MaterialPageRoute(builder: (context) => LoginPage()),
       );
     });
   }
@@ -57,7 +61,7 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: kBackgroundColor,
-      appBar: MyAppBar(
+      appBar: const MyAppBar(
         title1: 'Vivekanand Education Society\'s',
         title2: 'Institute of Technology',
         text1Size: 16,
@@ -71,7 +75,7 @@ class _SplashScreenState extends State<SplashScreen> {
               'images/MainLogo.png', // replace with your logo image path
               width: 300.0,
             ),
-            SizedBox(height: 16.0),
+            const SizedBox(height: 16.0),
             SizedBox(
               width: 250.0,
               child: DefaultTextStyle(
@@ -82,7 +86,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 child:
                     AnimatedTextKit(isRepeatingAnimation: true, animatedTexts: [
                   TyperAnimatedText('VESIT COMPASS',
-                      speed: Duration(milliseconds: 150)),
+                      speed: const Duration(milliseconds: 150)),
                 ]),
               ),
             ),

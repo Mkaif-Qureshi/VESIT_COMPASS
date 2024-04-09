@@ -12,16 +12,18 @@ class LoginPage extends StatelessWidget {
   late String email;
   late String password;
 
+  LoginPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: MyAppBar(
+      appBar: const MyAppBar(
         title1: 'Login',
         text1Size: 20.0,
         logoPath: 'assets/images/MainLogo.png',
       ),
       body: Container(
-        padding: EdgeInsets.all(20.0),
+        padding: const EdgeInsets.all(20.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -31,21 +33,21 @@ class LoginPage extends StatelessWidget {
               onChanged: (value) {
                 email = value;
               },
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 labelText: 'Email',
               ),
             ),
-            SizedBox(height: 20.0),
+            const SizedBox(height: 20.0),
             TextFormField(
               onChanged: (value) {
                 password = value;
               },
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 labelText: 'Password',
               ),
               obscureText: true,
             ),
-            SizedBox(height: 20.0),
+            const SizedBox(height: 20.0),
             Align(
               alignment: Alignment.centerLeft,
               child: ElevatedButton(
@@ -56,27 +58,25 @@ class LoginPage extends StatelessWidget {
                       password: password,
                     );
 
-                    if (user != null) {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => HomePage()),
-                      );
-                    }
-                  } catch (e) {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const HomePage()),
+                    );
+                                    } catch (e) {
                     print(e);
                     showDialog(
                       context: context,
                       builder: (BuildContext context) {
                         return AlertDialog(
-                          title: Text("Login Error"),
-                          content: Text(
+                          title: const Text("Login Error"),
+                          content: const Text(
                               "Failed to login. Please check your credentials."),
                           actions: [
                             TextButton(
                               onPressed: () {
                                 Navigator.of(context).pop();
                               },
-                              child: Text("OK"),
+                              child: const Text("OK"),
                             ),
                           ],
                         );
@@ -86,9 +86,9 @@ class LoginPage extends StatelessWidget {
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: kButtonColor,
-                  minimumSize: Size(100, 40),
+                  minimumSize: const Size(100, 40),
                 ),
-                child: Text(
+                child: const Text(
                   'Login',
                   style: TextStyle(
                     color: kTextColor,
@@ -97,7 +97,7 @@ class LoginPage extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 10.0),
+            const SizedBox(height: 10.0),
             TextButton(
               onPressed: () {
                 Navigator.push(
@@ -108,7 +108,7 @@ class LoginPage extends StatelessWidget {
               child: Text(
                 'Not have an account? Register',
                 style: GoogleFonts.poppins(
-                  textStyle: TextStyle(
+                  textStyle: const TextStyle(
                     color: Colors.blue,
                     fontSize: 14.0,
                   ),

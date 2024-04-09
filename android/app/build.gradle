@@ -2,7 +2,6 @@ plugins {
     id "com.android.application"
     id "kotlin-android"
     id "dev.flutter.flutter-gradle-plugin"
-    id 'com.android.application'
     id 'com.google.gms.google-services'
 }
 
@@ -25,7 +24,7 @@ if (flutterVersionName == null) {
 }
 
 android {
-    namespace "com.example.vesit_compass"
+    namespace "com.mkaifqureshi.vesit_compass"
     compileSdkVersion flutter.compileSdkVersion
     ndkVersion flutter.ndkVersion
 

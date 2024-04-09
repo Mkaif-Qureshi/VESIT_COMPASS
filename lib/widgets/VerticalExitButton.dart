@@ -14,14 +14,14 @@ class VerticalExitButton extends StatelessWidget {
       },
       child: Container(
         height: 150, // Adjust height as needed
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           color: Colors.deepOrange, // Adjust button color as needed
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(10),
             bottomLeft: Radius.circular(10),
           ),
         ),
-        child: Column(
+        child: const Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             VerticalText(

@@ -6,8 +6,11 @@ import 'package:vesit_compass/widgets/MyAppBar.dart';
 import 'package:vesit_compass/widgets/TimeCard.dart';
 
 import '../constants.dart';
+import '../widgets/CustomButton.dart';
 
 class HomePage extends StatefulWidget {
+  const HomePage({super.key});
+
   @override
   _HomePageState createState() => _HomePageState();
 }
@@ -26,13 +29,11 @@ class _HomePageState extends State<HomePage> {
 
   void getCurrentUser() async {
     try {
-      final user = await _auth.currentUser!;
-      if (user != null) {
-        setState(() {
-          loggedInUser = user;
-          print(loggedInUser.email);
-        });
-      }
+      final user = _auth.currentUser!;
+      setState(() {
+        loggedInUser = user;
+        print(loggedInUser.email);
+      });
     } catch (e) {
       print(e);
     }
@@ -47,7 +48,7 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       backgroundColor: kBackgroundColor,
       appBar: MyAppBar(
         title1: 'VESIT COMPASS',
@@ -70,6 +71,9 @@ class _HomePageState extends State<HomePage> {
               FloorCard(floorNumber: 4),
               FloorCard(floorNumber: 5),
               FloorCard(floorNumber: 6),
+              CustomButton(
+                buttonText: 'Explore Events',
+              ),
               SizedBox(height: 20), // Add some spacing at the bottom
             ],
           ),

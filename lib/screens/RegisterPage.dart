@@ -17,16 +17,18 @@ class RegisterPage extends StatelessWidget {
   String? selectedClass; // Change the type to nullable
   late int roll;
 
+  RegisterPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: MyAppBar(
+      appBar: const MyAppBar(
         title1: 'Register', // Title for the app bar
         text1Size: 20.0, // Font size for the title
         logoPath: 'assets/images/MainLogo.png', // Path to your logo asset
       ),
       body: Container(
-        padding: EdgeInsets.all(20.0),
+        padding: const EdgeInsets.all(20.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -35,16 +37,16 @@ class RegisterPage extends StatelessWidget {
               onChanged: (value) {
                 email = value;
               },
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 labelText: 'Email',
               ),
             ),
-            SizedBox(height: 20.0),
+            const SizedBox(height: 20.0),
             TextFormField(
               onChanged: (value) {
                 password = value;
               },
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 labelText: 'Password',
               ),
               obscureText: true,
@@ -89,7 +91,7 @@ class RegisterPage extends StatelessWidget {
             //     FilteringTextInputFormatter.digitsOnly // Allow only digits
             //   ],
             // ),
-            SizedBox(height: 20.0),
+            const SizedBox(height: 20.0),
             Align(
               alignment: Alignment.centerLeft,
               child: ElevatedButton(
@@ -98,23 +100,21 @@ class RegisterPage extends StatelessWidget {
                   try {
                     final newUser = await _auth.createUserWithEmailAndPassword(
                         email: email, password: password);
-                    if (newUser != null) {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) =>
-                                HomePage()), // Navigate to RegisterPage
-                      );
-                    }
-                  } catch (e) {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>
+                              const HomePage()), // Navigate to RegisterPage
+                    );
+                                    } catch (e) {
                     print(e);
                   }
                 },
                 style: ElevatedButton.styleFrom(
-                  minimumSize: Size(100, 40),
+                  minimumSize: const Size(100, 40),
                   backgroundColor: kButtonColor,
                   padding:
-                      EdgeInsets.symmetric(vertical: 15.0), // Button padding
+                      const EdgeInsets.symmetric(vertical: 15.0), // Button padding
                   // shape: RoundedRectangleBorder(
                   //   borderRadius:
                   //       BorderRadius.circular(8.0), // Button border radius
@@ -125,7 +125,7 @@ class RegisterPage extends StatelessWidget {
                   'Register',
                   style: GoogleFonts.poppins(
                     // Use Google Fonts for a modern look
-                    textStyle: TextStyle(
+                    textStyle: const TextStyle(
                       fontSize: 14.0,
                       color: kTextColor,
                     ),
@@ -133,7 +133,7 @@ class RegisterPage extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 10.0),
+            const SizedBox(height: 10.0),
             TextButton(
               onPressed: () {
                 // Navigator.push(
@@ -149,7 +149,7 @@ class RegisterPage extends StatelessWidget {
                 'Already have an account? Login',
                 style: GoogleFonts.poppins(
                   // Use Google Fonts for a modern look
-                  textStyle: TextStyle(
+                  textStyle: const TextStyle(
                     color: Colors.blue,
                     fontSize: 14.0,
                   ),
